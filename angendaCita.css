@@ -1,0 +1,610 @@
+
+
+
+
+
+
+
+
+
+
+
+/* MENU DE ARRIBA */
+header {
+    position: fixed;
+    top: 5px; /* Separación desde la parte superior */
+    left: 5px; /* Separación desde el borde izquierdo */
+    right: 5px; /* Separación desde el borde derecho */
+    width: calc(100% - 10px); /* Ajuste el ancho para que se mantenga con una separación de 5px en cada lado */
+    background: linear-gradient(to bottom, rgba(226, 28, 28, 0.09), rgba(240, 227, 227, 0.9)), url(https://th.bing.com/th/id/OIP.9j2bxnMt0SPNNnIHkvbbtQHaGo?w=201&h=180&c=7&r=0&o=5&pid=1.7);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 15px 30px; /* Ajuste del padding para un buen espaciado */
+    z-index: 1000;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box; /* Asegura que el padding no sume al ancho total */
+    border-radius:  5px;
+
+}
+
+.header-content {
+    max-width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header-logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header-logo i {
+    font-size: 1.3em;
+}
+
+.header-message {
+    font-size: 0.9em;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    flex: 1 1 auto;
+    color: #030303;
+}
+
+.cta-button {
+    background: linear-gradient(to right, #030303, #684a4ae0);
+    color: #e21c1c;
+    border: none;
+    border-radius:  0px 20px 0px 20px !important;
+    padding: 8px 15px;
+    font-size: 0.9em;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(to right, #03030342, #050505);
+}
+
+/* Espacio para que el contenido no se superponga */
+.page-content {
+    padding-top: 80px;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px !important;
+    }
+
+    .header-content {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .header-logo {
+        font-size: 1.5em;
+    }
+
+    .header-message {
+        font-size: 0.9em;
+    }
+
+    .cta-button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    .page-content {
+        padding-top: 120px;
+    }
+}
+
+@media (max-width: 375px) {
+    header {
+        padding: 10px 20px !important; /* Ajuste para pantallas más pequeñas */
+    }
+
+    .header-logo {
+        font-size: 1.3em;
+    }
+
+    .header-message {
+        font-size: 0.8em;
+    }
+
+    .cta-button {
+        padding: 6px 10px;
+        font-size: 0.8em;
+    }
+
+    .page-content {
+        padding-top: 140px;
+    }
+}
+
+@media (min-width: 769px) {
+    header {
+        display: none !important;
+    }
+}
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FORMULARIO */
+
+
+/* Estilos generales del formulario */
+.form-container {
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 980px;
+    margin: 40px auto;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.3s ease; /* Transición suave para el efecto hover */
+}
+
+/* Efecto hover para escritorio y tabletas */
+.form-container:hover {
+    background: linear-gradient(to right, rgba(255, 200, 200, 0.836), rgba(255, 180, 200, 0.9)); /* Colores más intensos al pasar el mouse */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Sombra más profunda */
+}
+
+/* Estilos específicos para dispositivos móviles cuando se hace clic */
+@media (max-width: 768px) {
+    .form-container:active {
+        background: linear-gradient(to right, rgba(255, 230, 230, 0.8), rgba(255, 180, 200, 0.9)); /* Colores diferentes cuando se hace clic en dispositivos móviles */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más ligera en clic */
+    }
+}
+
+
+h2 {
+    text-align: center;
+    color: #9c27b0; /* Color morado suave para un toque femenino */
+    font-family: 'Dancing Script', cursive; /* Fuente cursiva elegante */
+    font-size: 50px; /* Tamaño de fuente más grande para un efecto llamativo */
+    font-weight: 700; /* Peso de la fuente más pesado para mayor elegancia */
+    margin-bottom: 40px; /* Espacio inferior mayor */
+    letter-spacing: 2px; /* Espaciado entre letras para un toque refinado */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra sutil para mayor profundidad */
+    transform: rotate(-1deg); /* Ligera rotación para darle un toque dinámico */
+}
+
+/* Estilo para pantallas móviles */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 50   px; /* Aumentar el tamaño en pantallas más pequeñas */
+        margin-bottom: 50px; /* Más espacio en pantallas móviles */
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 56px; /* Aumentar aún más en pantallas muy pequeñas */
+    }
+}
+
+
+
+label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+    color: #6a1b9a; /* Color morado oscuro */
+}
+
+/* Contenedor de los íconos */
+.icon-input {
+    position: relative;
+    margin-bottom: 20px; /* Espaciado entre los campos */
+}
+
+.icon-input i {
+    position: absolute;
+    right: 12px; /* Coloca el ícono al lado derecho */
+    top: -20px; /* Coloca el ícono encima del campo */
+    color: #d507fad7 !important;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px 18px;
+    margin: 12px 0;
+    border: 2px solid #e1bee7;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #620472;
+    outline: none;
+    box-shadow: 0 0 8px rgba(156, 39, 176, 0.4);
+}
+
+textarea {
+    resize: vertical;
+}
+
+textarea:focus {
+    background-color: #f3e5f5;
+}
+
+/* Cambiar color del ícono al enfocar */
+input:focus ~ .icon-input i, select:focus ~ .icon-input i, textarea:focus ~ .icon-input i {
+    color: #a73fb5; /* Cambiar color del ícono al enfocar */
+}
+
+/* Efectos hover */
+input:hover, select:hover, textarea:hover {
+    background-color: #f3e5f5; /* Fondo suave al pasar el mouse */
+}
+
+/* Botón */
+.btn {
+    display: inline-block;
+    background-color: #9c27b0;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 8px;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+    font-size: 18px;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #8e24aa; /* Efecto al pasar el mouse */
+    transform: translateY(-3px); /* Elevación elegante */
+}
+
+.btn:active {
+    transform: translateY(1px); /* Efecto al hacer clic */
+}
+
+/* Estilos para los campos requeridos */
+.required::after {
+    content: " *";
+    color: red;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 25px;
+        margin: 30px auto;
+    }
+    input, select, textarea {
+        padding: 10px;
+    }
+    .btn {
+        padding: 12px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        padding: 15px;
+        margin: 160px auto;
+    }
+    h2 {
+        font-size: 22px;
+    }
+    input, select, textarea {
+        padding: 8px;
+        font-size: 14px;
+    }
+    .btn {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+/* Íconos en los campos */
+.icon-input input,
+.icon-input select,
+.icon-input textarea {
+    padding-right: 40px; /* Alineación de los campos para dejar espacio al ícono */
+}
+
+.icon-input i {
+    position: absolute;
+    right: 12px; /* Ubicación del ícono al lado derecho */
+    top: -28px; /* Ubicación del ícono encima del campo */
+    color: #9c27b0;
+    font-size: 24px;
+}
+
+.icon-input input:focus,
+.icon-input select:focus,
+.icon-input textarea:focus {
+    background-color: #f3e5f5;
+}
+
+.icon-input input:focus ~ i,
+.icon-input select:focus ~ i,
+.icon-input textarea:focus ~ i {
+    color: #3f51b5;
+}
+
+
+.form-container {
+    margin-bottom: 160px; /* Ajusta el espacio según lo necesites */
+  }
+
+
+/* Estilo para tablets y iPads (pantallas de entre 600px y 1024px) */
+@media (max-width: 1024px) {
+    .form-container {
+        margin-bottom: 150px !important; /* Ajusta el espacio según lo necesites */
+    }
+}
+
+/* Estilo específico para iPad Mini (pantallas de entre 600px y 768px) */
+@media (min-width: 700px) and (max-width: 1024px) {
+    .form-container {
+        margin-top: 320px !important;  /* Separación del contenido superior */
+        margin-bottom: 130px !important; /* Separación del contenido inferior */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MENU FIJO  */
+.menu-fijo {
+    position: fixed;
+    bottom: 10px; /* Separación desde la parte inferior */
+    left: 50%; /* Posición centrada horizontalmente */
+    transform: translateX(-50%); /* Ajuste para centrar */
+    width: calc(100% - 50px) !important; /* Separación lateral de 20px por lado */
+    background: linear-gradient(to right, #ff79c6, #ff3b7d);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius:  20px 0 20px 0px !important;
+    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  
+  
+  /* Ítems del menú */
+  .menu-item {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(to right, #f0e1ff, #ffe6f5);
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .menu-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Íconos */
+  .menu-item i {
+    font-size: 24px;
+    color: #ff79c6;
+  }
+  
+
+
+  @keyframes wave {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(-10deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    75% {
+      transform: rotate(10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  .menu-message {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    color: #fff;
+    background: linear-gradient(to right, rgba(230, 128, 162, 0.9), rgba(255, 240, 240, 0.836));
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  
+  .menu-message:hover {
+    background-color: #e67e22;
+    transform: scale(1.05);
+  }
+
+  
+  
+  .menu-message i {
+    margin-right: 10px;
+    font-size: 24px;
+    color: #fff;
+    animation: wave 2s infinite;
+  }
+  
+  @media (max-width: 768px) {
+    .menu-message {
+      font-size: 16px;
+      padding: 15px;
+    }
+  
+    .menu-message i {
+      font-size: 20px;
+    }
+  }
+  
+
+
+
+
+
+/* Estilos específicos para móviles */
+@media (max-width: 600px) {
+    .submenu {
+        bottom: 80px; /* Ajusta la posición para móviles */
+        border-radius: 20px; /* Bordes más redondeados */
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada */
+        left: 50%;
+    }
+
+    .submenu-item {
+        font-size: 18px; /* Fuente un poco más grande */
+        margin: 12px 0; /* Más espaciado entre ítems */
+    }
+
+    .submenu.show {
+        transform: translateY(-10px); /* Desplazamiento más suave al desplegarse */
+        border: 2px solid #ff79c6; /* Borde de color en el submenú */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1366px) {
+    html, body {
+        overflow-y: auto; /* Habilita desplazamiento vertical */
+        height: 100%; /* Garantiza que el contenido pueda extenderse */
+        margin: 0;
+        padding: 0;
+    }
+
+    .form-container {
+        width: 70%; /* Ajusta el formulario al 70% del ancho de la pantalla */
+        padding: 40px; /* Espaciado elegante */
+        margin: 60px auto; /* Separación suficiente desde el banner y el menú */
+        border-radius: 15px; /* Bordes redondeados para un diseño moderno */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra destacada */
+        max-height: 90%; /* Limita la altura para evitar desbordes */
+        overflow-y: auto; /* Permite desplazamiento interno si es necesario */
+    }
+
+    h2 {
+        font-size: 24px; /* Tamaño del encabezado optimizado para tablets */
+        color: #3949ab; /* Azul elegante */
+    }
+
+    input,
+    select,
+    textarea {
+        padding: 12px; /* Espaciado cómodo para tablets */
+        font-size: 16px; /* Texto más legible */
+        border: 2px solid #9fa8da; /* Bordes estilizados */
+        border-radius: 10px;
+    }
+
+    textarea {
+        resize: vertical; /* Permite ajustar el tamaño vertical del textarea */
+    }
+
+    .btn {
+        padding: 14px 20px; /* Botón grande y cómodo */
+        font-size: 18px;
+        background-color: #3949ab; /* Color destacado */
+        border-radius: 10px;
+        transition: background-color 0.3s ease; /* Transición suave al pasar el cursor */
+    }
+
+    .btn:hover {
+        background-color: #283593; /* Tono más oscuro al interactuar */
+    }
+}
+
+
+
+
+
+
+
+
+
+

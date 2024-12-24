@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mery Kaet</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+
+
+  <!-- MENU ARRIBA  -->
+ 
+<div class="fixed-banner">
+  <div class="logo">Nails Mery Kaet</div>
+  <div class="cta">Reserva tu cita hoy</div>
+  <div class="social-icons">
+  
+  <a href="https://wa.me/573004203306" class="social-icon">
+    <i class="fab fa-whatsapp"></i> <!-- Ícono de WhatsApp -->
+  </a>
+  
+  </div>
+</div>
+
+
+  
+ 
+  
+
+  
+  
+
+
+
+
+<br><br><br>
+
+
+
+
+
+
+
+
+    <!-- HEADER  -->
+  
+    <header class="header" onclick="openModal()">
+      <div class="header-content">
+        <h1 class="header-title"> <span>✨ Nails Mery Kaet ✨</span><br> Uñas & Pestañas Elegantes </h1>
+        <p class="header-subtitle">"Porque mereces brillar con estilo y confianza"</p>
+      </div>
+      <div class="header-overlay"></div>
+    </header>
+    
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 class="modal-heading">¡Bienvenida a Nails Mery Kaet!</h2>
+        <p class="modal-message">Tu estilo y confianza comienzan con nuestras uñas y pestañas elegantes. No esperes más, ¡agenda tu cita ahora y brilla como nunca!</p>
+        <a href="agendar-cita.html" class="modal-cta-button">¡Agenda tu cita!</a>
+      </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+  <!-- SOBRE NOSOTROS  -->
+
+  <section class="sobre-nosotros">
+    <div class="container-sobre-nosotros">
+      <div class="texto-sobre-nosotros">
+        <h2>Sobre Nosotros</h2>
+        <p>
+          En <span class="header-title"> Nails Mery kaet </span>, transformamos la belleza en arte. Nuestra pasión es brindarte 
+          servicios de <strong>alta calidad</strong> en uñas y pestañas, resaltando lo mejor de ti con dedicación y profesionalismo. 
+        </p>
+        <p>
+          Déjate consentir en un ambiente exclusivo, donde cada detalle está diseñado para ofrecerte una experiencia inolvidable. 
+          ¡Haz realidad el look que siempre soñaste con nosotros!
+        </p>
+        <button class="cta-button" onclick="redirectToBooking()">¡Agenda tu cita ahora!</button>
+      </div>
+      <div class="imagen-sobre-nosotros">
+        <img src="img/img8.jpeg" alt="Cuidado de uñas y pestañas" onclick="openModal()" />
+      </div>
+      
+      <!-- Modal -->
+      <div id="modalImagen" class="modal">
+        <div class="modal-contenido">
+          <span class="cerrar" onclick="closeModal()">&times;</span>
+          <img src="img/img8.jpeg" alt="Cuidado de uñas y pestañas" />
+          <p class="modal-texto">Cuidado de uñas y pestañas</p>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+  <!-- CLIENTES SASTIFECHOS -->
+
+  <section class="clientes-satisfechos">
+    <div class="container-sobre-nosotros">
+      <div class="texto-sobre-nosotros">
+    <h2>Clientes Satisfechos</h2>
+    <p>¡Nos encanta saber que nuestros clientes están felices con nuestros servicios! Aquí están algunos de sus testimonios:</p>
+    
+    <div class="carousel">
+      <div class="testimonial">
+        <p>"¡El servicio de uñas acrílicas es espectacular! Siempre salgo feliz y con uñas perfectas."</p>
+        <h4>- Laura Gómez</h4>
+      </div>
+      <div class="testimonial">
+        <p>"¡Las pestañas que me hicieron fueron increíbles! Me siento más segura y hermosa."</p>
+        <h4>- Mariana Pérez</h4>
+      </div>
+      <div class="testimonial">
+        <p>"Siempre encuentro el diseño perfecto para mis uñas. ¡No cambio este lugar por nada!"</p>
+        <h4>- Carmen Díaz</h4>
+      </div>
+      <div class="testimonial">
+        <p>"El ambiente es súper relajante y el servicio es de calidad. ¡Totalmente recomendado!"</p>
+        <h4>- Ana Martínez</h4>
+      </div>
+    </div>
+    
+  </section>
+  
+
+
+
+
+
+
+<br><br>
+
+
+
+
+
+
+
+
+    
+  <!-- NUESTROS SERVOICIOSSS  -->
+
+<!-- NUESTROS SERVICIOS -->
+
+<section class="servicios">
+  <div class="container-sobre-nosotros">
+    <div class="texto-sobre-nosotros">
+      <h2>Nuestros Servicios</h2>
+      <div class="cards-container">
+        <!-- Card 1 -->
+        <div class="card" data-aos="fade-up" style="background-image: url('img/img12.jpeg');">
+          <div class="card-content">
+            <i class="fas fa-paint-brush"></i>
+            <h3>Manicure</h3>
+            <p>Cuidado y diseño de uñas para una apariencia perfecta.</p>
+          </div>
+        </div>
+
+        <!-- Card 2 (oculta inicialmente) -->
+        <div class="card more-cards" data-aos="fade-up" style="background-image: url('img/img7.jpeg');">
+          <div class="card-content">
+            <i class="fas fa-eye"></i>
+            <h3>Cuidado de Uñas</h3>
+            <p>Uñas impecables y saludables con estilos únicos que destacan tu personalidad.</p>
+
+          </div>
+        </div>
+
+        <!-- Card 3 (oculta inicialmente) -->
+        <div class="card more-cards" data-aos="fade-up" style="background-image: url('img/img1.jpeg');">
+          <div class="card-content">
+            <i class="fas fa-hand-sparkles"></i>
+            <h3>Uñas Acrílicas</h3>
+            <p>Durabilidad y estilo en cada aplicación.</p>
+          </div>
+        </div>
+
+        <!-- Card 4 (oculta inicialmente) -->
+        <div class="card more-cards" data-aos="fade-up" style="background-image: url('img/img2.jpeg');">
+          <div class="card-content">
+            <i class="fas fa-palette"></i>
+            <h3>Diseño Personalizado</h3>
+            <p>Uñas que reflejan tu personalidad y estilo único.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botón Ver Más -->
+      <button id="verMasBtn" class="ver-mas-btn">Ver más</button>
+    </div>
+  </div>
+</section>
+
+
+<!-- Modal (se agregará dinámicamente con JS) -->
+<div class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" src="" alt="Imagen del servicio">
+</div>
+
+
+
+  
+  
+
+
+
+  <br><br>
+  
+
+
+
+  <!-- WHATSAPP FIJO -->
+ <!-- Botón de WhatsApp -->
+ <a href="https://wa.me/573004203306" target="_blank" class="btn-whatsapp" title="¡Contáctanos por WhatsApp!">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+
+
+
+
+
+
+
+
+
+   <!-- FOOTER  -->
+   <footer class="footer">
+    <p class="thank-you-message">¡Gracias por visitarnos! Te esperamos pronto para cuidar de tus uñas.</p>
+    <p class="footer-bottom">&copy; 2024 Nails Mery Kaet. Todos los derechos reservados.</p>
+  </footer>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+    <br><br><br>
+
+
+ <!-- MENU INFERIOR -->
+    <div class="menu-fijo">
+        <a href="index.html" class="menu-item"><i class="fas fa-home"></i></a>
+        <div class="logo"></div>
+        <span class="header-title"> Nails Mery kaet </span>
+        <a href="angendaCita.html" class="menu-item"><i class="fas fa-envelope"></i></a>
+        <a href="#" class="menu-item menu-toggle"><i class="fas fa-bars"></i></a>
+        
+        <!-- Menú desplegable dentro de la opción de tres líneas -->
+        <div class="submenu">
+          <a href="angendaCita.html" class="submenu-item">Separa tu cita</a>
+          <a href="https://wa.me/573004203306" class="submenu-item">Contacto rápido</a>
+        </div>
+      </div>
+      
+
+
+
+
+
+
+
+
+
+   
+      
+
+
+
+
+
+
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

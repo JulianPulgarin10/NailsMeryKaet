@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="angendaCita.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <title>Agendar Citas</title>
+</head>
+<body>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <style>
+        /* CSS para el contenedor de partículas */
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Esto coloca las partículas en el fondo */
+        }
+
+        /* Estilo básico de la página */
+        body {
+            background-color: #1a1a1a; /* Fondo oscuro */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="particles-js"></div>
+
+    <script>
+        /* Configuración de las partículas */
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 100, // Número de partículas
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: '#ffffff' // Color de las partículas
+                },
+                shape: {
+                    type: 'circle', // Forma de las partículas
+                },
+                opacity: {
+                    value: 0.5, // Opacidad de las partículas
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 1,
+                        opacity_min: 0.1,
+                    }
+                },
+                size: {
+                    value: 5, // Tamaño de las partículas
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 10,
+                        size_min: 0.1
+                    }
+                },
+                move: {
+                    enable: true,
+                    speed: 2, // Velocidad de las partículas
+                    direction: 'random',
+                    random: true,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: false,
+                }
+            },
+            interactivity: {
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: 'repulse'
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: 'push'
+                    }
+                },
+                modes: {
+                    repulse: {
+                        distance: 100,
+                        duration: 0.4
+                    },
+                    push: {
+                        particles_nb: 4
+                    }
+                }
+            },
+            retina_detect: true
+        });
+
+        
+    </script>
+
+
+
+
+
+
+    <!-- MENU DE ARRIBA  -->
+    <header>
+        <div class="header-content">
+            <div class="header-logo">
+                <i class="fas fa-paint-brush"></i> Nails Mery Kaet
+            </div>
+            <div class="header-message">
+                Todo sobre uñas: diseños únicos y cuidados profesionales para tus manos. ¡Transforma tus uñas con nosotros!
+            </div>
+            <a href="https://wa.me/573004203306" class="cta-button">
+                <i class="fas fa-comments"></i> Agenda tu cita
+            </a>
+        </div>
+    </header>
+    
+    
+  
+   
+      
+      
+    
+   
+    
+      
+
+
+
+<br><br>
+
+
+
+
+    
+    <!-- FORMULARIO DE CITAS -->
+
+    <div class="form-container">
+        <h2>Agenda tu Cita</h2>
+        <form action="#" method="POST" id="formularioCita">
+            <!-- Nombre Completo -->
+            <label for="nombre" class="required">Nombre Completo</label>
+            <div class="icon-input">
+                <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre completo">
+                <i class="fas fa-user"></i> <!-- Ícono de usuario -->
+            </div>
+            
+            <!-- Número de Teléfono -->
+            <label for="telefono" class="required">Número de Teléfono</label>
+            <div class="icon-input">
+                <input type="tel" id="telefono" name="telefono" required placeholder="Ingresa tu número de teléfono" pattern="[0-9]{10}">
+                <i class="fas fa-phone-alt"></i> <!-- Ícono de teléfono -->
+            </div>
+            
+            <!-- Correo Electrónico -->
+            <label for="email" class="required">Correo Electrónico</label>
+            <div class="icon-input">
+                <input type="email" id="email" name="email" required placeholder="Ingresa tu correo electrónico">
+                <i class="fas fa-envelope"></i> <!-- Ícono de correo -->
+            </div>
+            
+            <!-- Fecha de la Cita -->
+            <label for="fecha" class="required">Fecha de la Cita</label>
+            <div class="icon-input">
+                <input type="date" id="fecha" name="fecha" required>
+                <i class="fas fa-calendar-alt"></i> <!-- Ícono de calendario -->
+            </div>
+            
+            <!-- Hora de la Cita -->
+            <label for="hora" class="required">Hora de la Cita</label>
+            <div class="icon-input">
+                <input type="time" id="hora" name="hora" required>
+                <i class="fas fa-clock"></i> <!-- Ícono de reloj -->
+            </div>
+            
+            <!-- Servicio Solicitado -->
+            <label for="servicio" class="required">Servicio Solicitado</label>
+            <div class="icon-input">
+                <select id="servicio" name="servicio" required>
+                    <option value="">Selecciona un servicio</option>
+                    <option value="uñas">Uñas Acrílicas</option>
+                    <option value="pestañas">Extensiones de Pestañas</option>
+                    <option value="manicure">Manicure</option>
+                    <option value="pedicure">Pedicure</option>
+                    <option value="otros">Otros</option>
+                </select>
+                <i class="fas fa-concierge-bell"></i> <!-- Ícono de servicio -->
+            </div>
+            
+            <!-- Comentarios Adicionales -->
+            <label for="comentarios">Comentarios Adicionales</label>
+            <div class="icon-input">
+                <textarea id="comentarios" name="comentarios" rows="4" placeholder="Escribe algún detalle sobre tu cita"></textarea>
+                <i class="fas fa-comment-dots"></i> <!-- Ícono de comentario -->
+            </div>
+            
+            <button type="submit" class="btn">Agendar Cita</button>
+        </form>
+    
+        <!-- Mensaje de confirmación -->
+        <div id="mensajeConfirmacion" class="mensaje-confirmacion" style="display: none;">
+            <p><i class="fas fa-check-circle"></i> Cita correctamente enviada, te estaremos comunicando.</p>
+        </div>
+    
+        <!-- Mensaje de hora ocupada -->
+        <div id="mensajeHoraOcupada" class="mensaje-error" style="display: none;">
+            <p><i class="fas fa-times-circle"></i> Esta hora ya está ocupada, por favor selecciona otra.</p>
+        </div>
+    
+        <!-- Mensaje de hora dentro del rango no permitido -->
+        <div id="mensajeRangoHora" class="mensaje-error" style="display: none;">
+            <p><i class="fas fa-times-circle"></i> "La hora seleccionada ya está ocupada o está fuera del rango disponible. Por favor, elige otra hora dentro de un rango de dos horas a partir de la hora actual."</p>
+        </div>
+    </div>
+    
+    <script type="module">
+        // Importación de Firebase
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+        import { getFirestore, collection, query, where, getDocs, addDoc } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js";
+    
+        // Configuración de Firebase
+        const firebaseConfig = {
+            apiKey: "AIzaSyBJbDrmG7V9kGyFFJm1n6PLhtvL_8LVxhY",
+            authDomain: "nails-mery-kaet.firebaseapp.com",
+            projectId: "nails-mery-kaet",
+            storageBucket: "nails-mery-kaet.firebasestorage.app",
+            messagingSenderId: "299990469987",
+            appId: "1:299990469987:web:eef6ce1c5d1e80bf7c1756"
+        };
+    
+        // Inicialización de Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+    
+        // Selección del formulario y mensajes
+        const formulario = document.getElementById('formularioCita');
+        const mensajeConfirmacion = document.getElementById('mensajeConfirmacion');
+        const mensajeHoraOcupada = document.getElementById('mensajeHoraOcupada');
+        const mensajeRangoHora = document.getElementById('mensajeRangoHora');
+        const fechaInput = document.getElementById('fecha');
+        const horaInput = document.getElementById('hora');
+    
+        // Limitar la selección de citas a tres por día
+        let citasOcupadas = [];
+    
+        // Verificar las citas existentes para un día específico
+        async function verificarCitasExistentes(fecha) {
+            const citasRef = collection(db, "citas");
+            const q = query(citasRef, where("fecha", "==", fecha));
+            const querySnapshot = await getDocs(q);
+            citasOcupadas = [];
+            
+            querySnapshot.forEach((doc) => {
+                citasOcupadas.push(doc.data().hora);
+            });
+    
+            // Si hay 3 citas, bloquear la fecha
+            if (citasOcupadas.length >= 3) {
+                fechaInput.setAttribute("disabled", true);
+                alert("Ya no hay más citas disponibles para esta fecha.");
+            } else {
+                fechaInput.removeAttribute("disabled");
+            }
+        }
+    
+        // Verificar si la hora seleccionada está dentro del rango no permitido (2 horas antes o después)
+        function verificarRangoHora() {
+            const horaSeleccionada = horaInput.value;
+            const horaSeleccionadaDate = new Date(`1970-01-01T${horaSeleccionada}:00`);
+            
+            for (let citaHora of citasOcupadas) {
+                const citaHoraDate = new Date(`1970-01-01T${citaHora}:00`);
+                const diffHora = Math.abs(citaHoraDate - horaSeleccionadaDate) / 1000 / 60 / 60; // Diferencia en horas
+    
+                // Si la diferencia es menor a 2 horas
+                if (diffHora < 2) {
+                    mensajeRangoHora.style.display = "block"; // Mostrar el mensaje de error
+                    horaInput.value = ""; // Limpiar la selección de hora
+                    return;
+                }
+            }
+            
+            mensajeRangoHora.style.display = "none"; // Ocultar el mensaje de error si la hora es válida
+        }
+    
+        // Bloquear las horas ocupadas para el día seleccionado
+        function bloquearHoras() {
+            const horaSeleccionada = horaInput.value;
+            if (citasOcupadas.includes(horaSeleccionada)) {
+                mensajeHoraOcupada.style.display = "block";  // Mostrar el mensaje de error
+                horaInput.value = ""; // Limpiar la selección de hora
+            } else {
+                mensajeHoraOcupada.style.display = "none";  // Ocultar el mensaje de error si la hora es válida
+            }
+    
+            // Verificar si la hora está en el rango no permitido
+            verificarRangoHora();
+        }
+    
+        // Evento para cuando se selecciona una fecha
+        fechaInput.addEventListener('change', (e) => {
+            const fechaSeleccionada = e.target.value;
+            verificarCitasExistentes(fechaSeleccionada);
+        });
+    
+        // Evento para cuando se selecciona una hora
+        horaInput.addEventListener('change', bloquearHoras);
+    
+        // Evento para el envío del formulario
+        formulario.addEventListener('submit', async (e) => {
+            e.preventDefault();
+    
+            const nombre = document.getElementById('nombre').value;
+            const telefono = document.getElementById('telefono').value;
+            const email = document.getElementById('email').value;
+            const fecha = document.getElementById('fecha').value;
+            const hora = document.getElementById('hora').value;
+            const servicio = document.getElementById('servicio').value;
+            const comentarios = document.getElementById('comentarios').value;
+    
+            // Verificar si ya hay tres citas para la fecha
+            if (citasOcupadas.length >= 3) {
+                alert("No se pueden agendar más citas para esta fecha.");
+                return;
+            }
+    
+            // Guardar la cita en Firestore
+            try {
+                await addDoc(collection(db, "citas"), {
+                    nombre,
+                    telefono,
+                    email,
+                    fecha,
+                    hora,
+                    servicio,
+                    comentarios,
+                    fecha_envio: new Date()
+                });
+    
+                // Mostrar mensaje de confirmación
+                mensajeConfirmacion.style.display = "block";
+                formulario.style.display = "none";
+            } catch (error) {
+                console.error('Error al guardar la cita:', error);
+                alert('Hubo un problema al agendar tu cita.');
+            }
+        });
+    </script>
+    
+    <style>
+        .mensaje-confirmacion {
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 16px;
+        }
+        .mensaje-confirmacion i {
+            margin-right: 10px;
+        }
+    
+        .mensaje-error {
+            margin-top: 20px;
+            background-color: #FF6347;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 16px;
+        }
+        .mensaje-error i {
+            margin-right: 10px;
+        }
+    </style>
+    
+    
+    
+    
+    
+
+
+
+
+<br><br><br><br>    
+
+
+
+
+   <!-- MENU INFERIOR -->
+<div class="menu-fijo">
+    <a href="index.html" class="menu-item">
+        <i class="fas fa-home"></i>
+    </a>
+    <div class="menu-message"> <i class="fas fa-hand-paper"></i> ¡Vuelve pronto! </div>
+</div>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@1.35.0/dist/tsparticles.min.js"></script>
+<script src="angendaCita.js"></script>
+</body>
+</html>
